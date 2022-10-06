@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.frosted-glass h2 {
+    font-size: 40px;
+}
+
+#demo {
+    font-size: 100px;
+}
+
+.value {
+    font-size: 65px;
+}
+
+.desc {
+    text-align: center;
+}
+
+.candidate-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.candidate-container {
+    text-align: center;
+    max-width: 320px;
+}
+
+.candidate-container img {
+    width: 100%;
+}
+
+.candidate {
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.candidate-voted {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem #00000080;
+}
+
+.candidate:not(.candidate-voted):hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 991px) {
+    .candidate-box {
+        flex-direction: column;
+        max-width: 640px;
+        margin: 0 auto;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .candidate-box {
+        max-width: 240px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 796px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 48px;
+        margin: 0;
+    }
+
+    .frosted-glass h2 {
+        font-size: 32px;
+    }
+
+    #demo {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 40px;
+    }
+
+    .value {
+        font-size: 50px;
+    }
+
+    .first-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+
+    .candidate-container img {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .candidate {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .frosted-glass h2 {
+        font-size: 24px;
+    }
+
+    #demo {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 40px;
+    }
+
+    .value {
+        font-size: 40px;
+    }
+    .first-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+
+    .candidate-box img {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .candidate {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,91 @@
+.title-our-candidates {
+    font-weight: bold;
+    text-align: center;
+}
+
+.candidates-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.candidate {
+    position: relative;
+    cursor: pointer;
+    min-width: 150px;
+    max-width: 320px;
+    transition-duration: 300ms;
+}
+
+.candidate.frosted-glass {
+    border-radius: 20px !important;
+}
+
+.candidate-active {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem #00000080;
+}
+
+.candidate:not(.candidate-active):hover {
+    opacity: 0.8;
+}
+
+.candidate img {
+    width: 100%;
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .candidates-container {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .candidates-container {
+        flex-direction: column;
+    }
+
+    .candidate {
+        max-width: 240px;
+    }
+}
+
+.title-candidates-1 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.candidate-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.work-program {
+    font-weight: bold;
+}
+
+.video-desc {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.org-experience {
+    font-weight: bold;
+    text-align: center;
+}
+
+.org-experience-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.org-experience-desc::after {
+    content: ",";
+}
+
+.org-experience-desc:last-of-type:after {
+    content: "";
+}
