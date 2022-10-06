@@ -146,15 +146,11 @@
 
 @section('scripts')
 <script src="{{ URL::asset('js/countdown.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        function setmodal(id, name) {
-            var temp = document.getElementById('candidate-value');
-            temp.value = id;
-            
-            document.getElementById("candidate").innerText = `#0${id} - ${name}`;
-            $("#response").html(`<img src='img/candidate-${id}.png' alt='Candidate ${id}' style='width:64%;'>`)
-            $('#confirmationModal').modal('show')
-        }
-    </script>
+<script>
+    function setModal(id, name) {
+        document.getElementById('candidate-value').value = id;
+        document.getElementById("candidate").innerText = `#0${id} - ${name}`;
+        document.getElementById("response").innerHTML = (`<img src='img/candidate-${id}.png' alt='Candidate ${id}' style='width:64%;'>`);
+    }
+</script>            
 @endsection
