@@ -78,7 +78,7 @@
             @yield('content')
         </main>
 
-        <footer class="blur">
+        <footer class="blur mt-5">
           <div class="container py-5">
             <ul class="mb-4 ps-0">
               <li><a href="/">Home</a></li>
