@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/himti.png') }}">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
