@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="py-5">
+        <div class="py-5 w-100">
             @guest
                 @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') < \Carbon\Carbon::parse('2022-10-07 00:00:00')->format('Y-m-d H:i:s'))
                     <h2 class="text-center fw-bold">Please wait until the voting period opened</h2>
@@ -82,8 +82,14 @@
                             @foreach ($candidates as $candidate)
                                 <div class="candidate-container mx-auto">
                                     <label class="drinkcard-candidate position-relative" for="candidate-{{ $candidate->id }}">
-                                        <div id="candidate{{ $candidate->id }}" class="candidate frosted-glass my-0 position-relative @if(Auth::user()->voted_value == $candidate->id) candidate-voted @endif" style="border-radius: 20px !important;">
-                                            <h2 class="m-3 mb-0 fw-bold position-absolute" style="color: lightgray;">#0{{ $candidate->id }}</h2>
+                                        <div 
+                                            id="candidate{{ $candidate->id }}" 
+                                            class="candidate frosted-glass my-0 position-relative @if(Auth::user()->voted_value == $candidate->id) candidate-voted @endif" 
+                                            style="border-radius: 20px !important;"
+                                            onclick="setModal({{ $candidate->id}}, '{{ $candidate->name }}')"
+                                            data-bs-toggle="modal" data-bs-target="#confirmationModal"
+                                        >
+                                            <h2 class="m-3 mb-0 fw-bold position-absolute" style=";">#0{{ $candidate->id }}</h2>
                                             <img src="{{ asset("/img/".$candidate->image) }}" class="mx-auto">
                                         </div>
                                         <h3 class="pt-4 fw-bold h4">{{ $candidate->name }}</h3>
@@ -91,7 +97,9 @@
                                     @if (Auth::user()->voted != 1)
                                         <button type="button" id="vote-btn"
                                             class="btn btn-light mt-3"
-                                            onClick="setmodal({{ $candidate->id}}, '{{ $candidate->name }}')">Vote
+                                            onClick="setModal({{ $candidate->id}}, '{{ $candidate->name }}')"
+                                            data-bs-toggle="modal" data-bs-target="#confirmationModal"
+                                        >Vote
                                         </button>
                                     @endif
                                 </div>
@@ -114,8 +122,8 @@
                                         <h5 class="fw-bold mt-4">Are you sure you want to vote this candidate?</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                                        <button type="submit" class="btn btn-primary">Yes</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No, thanks</button>
+                                        <button type="submit" class="btn btn-primary">Yes, vote</button>
                                     </div>
                                 </div>
                             </div>
