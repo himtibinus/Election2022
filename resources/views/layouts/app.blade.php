@@ -80,14 +80,14 @@
 
         <footer class="blur mt-5">
           <div class="container py-5">
-            <ul class="mb-4 ps-0">
+            <ul class="top-section mb-4 ps-0">
               <li><a href="/">Home</a></li>
               <li><a href="/candidates">Candidates</a></li>
               <li><a href="/vote">Vote</a></li>
               <li><a href="/login">Login</a></li>
             </ul>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="mb-0">© 2022 <a href="https://himti.or.id">HIMTI BINUS University</a>.</p>
+            <div class="bottom-section d-flex justify-content-between align-items-center">
+              <p class="copyright mb-0">© 2022 <a href="https://himti.or.id">HIMTI BINUS University</a>.</p>
               <div class="socials">
                 <a href="https://www.facebook.com/himtibinus/"><i class="bi bi-facebook"></i></a>
                 <a href="https://twitter.com/himtibinus"><i class="bi bi-twitter"></i></a>
