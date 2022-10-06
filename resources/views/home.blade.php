@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@php
+  $dateStart = '2022-10-07T06:00:00Z';
+  $dateEnd = '2022-10-21T16:59:00Z';
+@endphp
+
 @section('content')
     <div class="container frosted-glass text-center px-3 px-md-5 py-5">
         <div class="content-1">
@@ -12,13 +17,13 @@
     <div class="container frosted-glass text-center px-3 px-md-5 py-5">
         <div class="content-2">
             <h2 class="pb-3 fw-bold">
-                @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') < \Carbon\Carbon::parse('2022-10-07 00:00:00')->format('Y-m-d H:i:s'))
+                @if (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") < \Carbon\Carbon::parse($dateStart)->format("Y-m-d\TH:i:sP"))
                 Voting period will open in
                 @else
                 We've only got
                 @endif
             </h2>
-            <div id="countdown" class="countdown-box" data-dateStart="Oct 7, 2022 00:00:00" data-dateEnd="Oct 21, 2022 00:00:00">
+            <div id="countdown" class="countdown-box" data-dateStart="{{ $dateStart }}" data-dateEnd="{{ $dateEnd }}">
                 <div class="time-container fw-bold" data-time="days">
                     <h1 class="value" id="days"></h1>
                     <p class="desc">Days</p>

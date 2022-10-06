@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@php
+  $dateStart = '2022-10-07T13:00:00+07:00';
+  $dateEnd = '2022-10-21T23:59:00+07:00';
+@endphp
+
 @section('assets')
 <link href="{{ asset('css/votingPage.css') }}" rel="stylesheet" type="text/css" />
 @endsection
@@ -19,13 +24,13 @@
                 <br />
                 <div class="content-2">
                     <h3 class="text-center fw-bold pb-3">
-                        @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') < \Carbon\Carbon::parse('2022-10-07 00:00:00')->format('Y-m-d H:i:s'))
+                        @if (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") < \Carbon\Carbon::parse($dateStart)->format("Y-m-d\TH:i:sP"))
                         Voting period will open in
                         @else
                         Voting period ends in
                         @endif
                     </h3>
-                    <div id="countdown" class="countdown-box mt-3" data-dateStart="Oct 7, 2022 00:00:00" data-dateEnd="Oct 21, 2022 00:00:00">
+                    <div id="countdown" class="countdown-box mt-3" data-dateStart="{{ $dateStart }}" data-dateEnd="{{ $dateEnd }}">
                         <div class="time-container fw-bold" data-time="days">
                             <h1 class="value" id="days"></h1>
                             <p class="desc">Days</p>
@@ -48,17 +53,17 @@
         </div>
         <div class="py-5 w-100">
             @guest
-                @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') < \Carbon\Carbon::parse('2022-10-07 00:00:00')->format('Y-m-d H:i:s'))
-                    <h2 class="text-center fw-bold">Please wait until the voting period opened</h2>
-                @elseif (\Carbon\Carbon::now()->format('Y-m-d H:i:s') > \Carbon\Carbon::parse('2022-10-21 00:00:00')->format('Y-m-d
+                @if (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") < \Carbon\Carbon::parse($dateStart)->format("Y-m-d\TH:i:sP"))
+                    <h2 class="text-center fw-bold">Please wait until the voting period opened!</h2>
+                @elseif (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") > \Carbon\Carbon::parse($dateEnd)->format('Y-m-d
                     H:i:s'))
-                    <h2 class="text-center fw-bold">The voting period was ended</h2>
+                    <h2 class="text-center fw-bold">The voting period has been ended.</h2>
                 @else
-                    <h2 class="text-center fw-bold">Please login to vote your candidate</h2>
+                    <h2 class="text-center fw-bold">Please login to vote your candidate!</h2>
                 @endif
             @else
-                @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') < \Carbon\Carbon::parse('2022-10-05 00:00:00')->format('Y-m-d H:i:s'))
-                    <h2 class="container text-center fw-bold ">Please wait until the voting period opened</h2>
+                @if (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") < \Carbon\Carbon::parse($dateStart)->format("Y-m-d\TH:i:sP"))
+                    <h2 class="container text-center fw-bold ">Please wait until the voting period opened!</h2>
                 @elseif(Auth::user()->email == null)
                     <h2 class="container text-center fw-bold">Your email has not been registered.</h2>
                     <h3 class="container text-center">Please input your email first!</h3>
@@ -129,7 +134,7 @@
                             </div>
                         </div>
                     </form>
-                @elseif (\Carbon\Carbon::now()->format('Y-m-d H:i:s') > \Carbon\Carbon::parse('2021-10-20 15:00:00')->format('Y-m-d
+                @elseif (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") > \Carbon\Carbon::parse($dateEnd)->format('Y-m-d
                     H:i:s'))=
                     <h2 class="fw-bold">The voting period has been ended.</h2>
                 @elseif (Auth::user()->voted == 1 && Auth::user()->voted_value != 0)
