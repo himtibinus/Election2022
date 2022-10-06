@@ -17,7 +17,7 @@ use App\Http\Controllers\CandidateController;
 
 Route::get('/', [CandidateController::class, 'index'])->name('home');
 Route::get('/home', [CandidateController::class, 'index'])->name('home');
-Route::get('/candidate',  [CandidateController::class, 'candidate'])->name('candidate');
+Route::get('/candidates',  [CandidateController::class, 'candidate'])->name('candidates');
 Route::get('/vote', [CandidateController::class, 'vote'])->name('vote');
 
 Auth::routes([

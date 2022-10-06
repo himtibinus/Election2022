@@ -41,8 +41,8 @@
                       active @endif" id="home" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link @if (session()->get('Page') == 'candidate')
-                      active @endif" id="candidates" aria-current="page" href="/candidate">Candidates</a>
+                    <a class="nav-link @if (session()->get('Page') == 'candidates')
+                      active @endif" id="candidates" aria-current="page" href="/candidates">Candidates</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link @if (session()->get('Page') == 'vote')

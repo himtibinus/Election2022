@@ -30,9 +30,9 @@ class CandidateController extends Controller
     }
     public function candidate()
     {
-        Session::put('Page', "candidate");
+        Session::put('Page', "candidates");
         $cand = Candidate::all();
-        return view('candidate')->with([
+        return view('candidates')->with([
             'candidates' => $cand
         ]);
     }
