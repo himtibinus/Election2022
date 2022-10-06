@@ -52,6 +52,11 @@
     transition-duration: 300ms;
 }
 
+.candidate h2 {
+    color: lightgray;
+    transition-duration: 300ms;
+}
+
 .candidate-voted {
     transform: scale(1.05);
     box-shadow: 0 1rem 3rem #00000080;
@@ -59,6 +64,10 @@
 
 .candidate:not(.candidate-voted):hover {
     opacity: 0.8;
+}
+
+.candidate:not(.candidate-voted):hover h2 {
+    color: #fff;
 }
 
 @media (max-width: 991px) {
