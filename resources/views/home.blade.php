@@ -8,7 +8,7 @@
 @section('content')
     <div class="container frosted-glass text-center px-3 px-md-5 py-5">
         <div class="content-1">
-            <h2 class="pb-3 fw-bold">10-11th October 2022</h2>
+            <h2 class="pb-3 fw-bold">7-21st October 2022</h2>
             <h1 class="pb-3 fw-bold text-uppercase">HIMTI Election 2022</h1>
             <h3 class="text-uppercase fw-bold">One Family, One Goal!</h3>
         </div>

@@ -19,7 +19,7 @@
                 <div class="himel content-1">
                     <h1 class="title">HIMTI ELECTION 2022</h1>
                 </div>
-                <h2 class="text-center fw-bold pt-3">10 - 11 October 2022</h2>
+                <h2 class="text-center fw-bold pt-3">7-21st October 2022</h2>
                 <br />
                 <br />
                 <div class="content-2">
