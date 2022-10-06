@@ -360,3 +360,7 @@ body {
 .text-shadow {
     text-shadow: 2px 2px 8px #00000050;
 }
+
+.bi{
+    font-size: 18px;
+}
