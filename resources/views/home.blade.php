@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @php
-  $dateStart = '2022-10-07T06:00:00Z';
-  $dateEnd = '2022-10-21T16:59:00Z';
+    $dateStart = '2022-10-07T13:00:00+07:00';
+    $dateEnd = '2022-10-21T23:59:59+07:00';
+
+    $now = \Carbon\Carbon::now()->setTimezone('Asia/Jakarta')->format("Y-m-d\TH:i:sP");
+    $start = \Carbon\Carbon::parse($dateStart)->setTimezone('Asia/Jakarta')->format("Y-m-d\TH:i:sP");
 @endphp
 
 @section('content')
@@ -17,7 +20,7 @@
     <div class="container frosted-glass text-center px-3 px-md-5 py-5">
         <div class="content-2">
             <h2 class="pb-3 fw-bold">
-                @if (\Carbon\Carbon::now()->format("Y-m-d\TH:i:sP") < \Carbon\Carbon::parse($dateStart)->format("Y-m-d\TH:i:sP"))
+                @if ($now < $start)
                 Voting period will open in
                 @else
                 We've only got
@@ -41,7 +44,7 @@
                     <p class="desc">Seconds</p>
                 </div>
             </div>
-            @if (\Carbon\Carbon::now()->format('Y-m-d H:i:s') >= \Carbon\Carbon::parse('2022-10-07 00:00:00')->format('Y-m-d H:i:s'))
+            @if ($now >= $start)
                 <h3 class="fw-bold pt-3">until the last voting period closed.</h3>
             @endif
         </div>
