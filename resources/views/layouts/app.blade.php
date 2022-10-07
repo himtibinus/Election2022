@@ -58,7 +58,7 @@
                     <a class="nav-link dropdown-toggle no-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu mt-3" style="left:auto;right:0;">
+                    <ul class="dropdown-menu mt-3">
                       <li><a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         <i class="bi bi-box-arrow-left me-2"></i>

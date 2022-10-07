@@ -50,8 +50,12 @@ nav {
     background-color: #fff;
     color: black;
 }
+.dropdown-menu {
+    left: auto!important;
+    right: 0;
+}
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .nav-item {
         margin: 0;
     }
@@ -62,5 +66,9 @@ nav {
 
     #home {
         margin-top: 20px;
+    }
+    .dropdown-menu {
+        left: 0;
+        right: auto;
     }
 }
