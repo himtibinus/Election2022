@@ -57,7 +57,7 @@
     <div class="container frosted-glass text-center px-3 px-md-5 py-5">
         <div class="content-3">
             <div class="video">
-                <iframe src="https://drive.google.com/file/d/1BIlQ8Y2MMipDoyrWfKstVOwr-W1NUSmp/preview" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe src="https://www.youtube.com/embed/FItuU59hBbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
