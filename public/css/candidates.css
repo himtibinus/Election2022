@@ -22,9 +22,18 @@
     border-radius: 20px !important;
 }
 
+.candidate h2 {
+    color: lightgray;
+}
+
 .candidate-active {
     transform: scale(1.05);
     box-shadow: 0 1rem 3rem #00000080;
+    border-color: #fff;
+}
+
+.candidate-active h2 {
+    color: #fff;
 }
 
 .candidate:not(.candidate-active):hover {

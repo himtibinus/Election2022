@@ -11,7 +11,7 @@
             @foreach ($candidates as $candidate)
                 <div id="candidate{{ $candidate->id }}" class="candidate frosted-glass my-0 position-relative @if ($candidate->id == 1)
                     candidate-active @endif">
-                    <h2 class="m-3 mb-0 fw-bold position-absolute" style="color: lightgray;">#0{{ $candidate->id }}</h2>
+                    <h2 class="m-3 mb-0 fw-bold position-absolute">#0{{ $candidate->id }}</h2>
                     <img src="{{ asset("/img/".$candidate->image) }}" class="mx-auto">
                 </div>
             @endforeach
