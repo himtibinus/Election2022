@@ -62,7 +62,7 @@
                 @elseif ($now > $end)
                     <h2 class="text-center fw-bold">The voting period has been ended.</h2>
                 @else
-                    <h2 class="text-center fw-bold">Please login to vote your candidate!</h2>
+                    <h2 class="text-center fw-bold">Please login to vote your favorite candidate!</h2>
                 @endif
             @else
                 @if ($now < $start)

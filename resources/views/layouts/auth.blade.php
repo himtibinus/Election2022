@@ -17,11 +17,29 @@
 </head>
 
 <body>
-    <div class="app">
-      <main class="py-5">
-          @yield('content')
-      </main>
-    </div>
+    <main class="py-5">
+        <div id="main-container" class="mt-5 mx-3">
+            <div id="sec-container">
+                <div id="left-container">
+                    <div id="main-title" class="text-shadow">
+                        HIMTI ELECTION 2022
+                    </div>
+        
+                    <div id="date">
+                        7-21st October 2022
+                    </div>
+                </div>
+                <div id="right-container">
+                    <div id="motto">
+                        ONE FAMILY ONE GOAL!
+                    </div>
+        
+                    <div id="input-container">
+                        @yield('content')
+                    </div>
+                </div>
+        </div>
+    </main>
     <script src="{{ URL::asset('js/app.js') }}"></script>
 
 </body>
