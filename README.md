@@ -1,7 +1,10 @@
 # HIMTI Election 2022
-**HIMTI Election 2022** is an e-voting website that allows students and lecturers to vote for the next Chairman of HIMTI BINUS University. 
+**HIMTI Election 2022** is an e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University. 
 
-This website was made with love by the Research and Development Commision of HIMTI BINUS University.
+This website was designed and built with love by the Research and Development Commision of HIMTI BINUS University.
+
+[Visit the e-voting website here](https://election.himtibinus.or.id)
+![HIMTI Election 2022](preview.png)
 
 ## Cast your vote, right now!
 Don't forget to **cast your vote** in this election by visiting [our e-voting website](https://election.himtibinus.or.id)! Please **don't abstain**! #AntiGolput #WeDontAbstain
