@@ -4,6 +4,7 @@
 This website was designed and built with love by the Research and Development Commision of HIMTI BINUS University.
 
 [Visit the e-voting website here](https://election.himtibinus.or.id)
+
 ![HIMTI Election 2022](preview.png)
 
 ## Cast your vote, right now!
