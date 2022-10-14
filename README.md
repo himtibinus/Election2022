@@ -12,7 +12,7 @@ Don't forget to **cast your vote** in this election by visiting [our e-voting we
 
 The voting period will end on October 21, 2022.
 
-## Guide to run the project locally
+## How to run the project locally
 
 ### Prerequisites
  Make sure to have `git`, `composer`, and `npm` installed on your local computer first.
