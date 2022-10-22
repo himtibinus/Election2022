@@ -67,6 +67,8 @@
             @else
                 @if ($now < $start)
                     <h2 class="container text-center fw-bold ">Please wait until the voting period opened!</h2>
+                @elseif ($now > $end)
+                    <h2 class="fw-bold text-center">The voting period has been ended.</h2>
                 @elseif(Auth::user()->email == null)
                     <h2 class="container text-center fw-bold">Your email has not been registered.</h2>
                     <h3 class="container text-center">Please input your email first!</h3>
@@ -137,8 +139,6 @@
                             </div>
                         </div>
                     </form>
-                @elseif ($now > $end)
-                    <h2 class="fw-bold">The voting period has been ended.</h2>
                 @elseif (Auth::user()->voted == 1 && Auth::user()->voted_value != 0)
                     @if (session('message'))
                         <h2 class="fw-bold">{{ session('message') }}</h2>
