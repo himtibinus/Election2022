@@ -60,6 +60,11 @@
 .candidate-voted {
     transform: scale(1.05);
     box-shadow: 0 1rem 3rem #00000080;
+    border-color: #fff;
+}
+
+.candidate-voted h2 {
+    color: #fff;
 }
 
 .candidate:not(.candidate-voted):hover {
@@ -160,6 +165,7 @@
     .value {
         font-size: 40px;
     }
+
     .first-content {
         display: flex;
         flex-direction: row;
